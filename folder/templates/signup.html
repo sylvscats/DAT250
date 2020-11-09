@@ -1,0 +1,41 @@
+{% extends "basic.html" %}
+{%block title%} Signup in Your Bank {%endblock%}
+{% block content %}
+<h1>{%block head%}Welcome as a new user {% endblock %}</h1>
+  name, personnumber, email, address, password
+<form method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name"
+               placeholder="Your full name " class="form-control"
+               value="{{ request.form['name'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="personnumber">Personnumber</label>
+        <textarea name="personnumber" placeholder="Your personnumber"
+                  class="form-control">{{ request.form['personnumber'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email"
+               placeholder="abc@abc.com" class="form-control"
+               value="{{ request.form['email'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Address</label>
+        <textarea name="address" placeholder="Your full address"
+                  class="form-control">{{ request.form['address'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" name="password"
+               placeholder="as long as you can, not the same for other nettsite" class="form-control"
+               value="{{ request.form['password'] }}"></input>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
