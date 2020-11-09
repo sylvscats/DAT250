@@ -2,8 +2,6 @@
 
 GitHub repository for prosjektet i DAT250. 
 Gruppe:
-> Sylwia Wasilewska
-> Fatima Matieva
-> Abbas-Jamal Jamal
+Fatima Matieva, Abbas-Jamal Jamal, Sylwia Wasilewska
 
 Oppgave: Nettbank
