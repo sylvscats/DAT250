@@ -1,9 +1,0 @@
-{% extends "basic.html" %}
-{%block title%}user {%endblock%}
-{% block content %}    <h1>  DataBase </h1>
-    {% for user in users %}
-        <a href="#">
-            <h2>Id:{{ user['id'] }} Name:{{ user['name'] }}  Personnumber:{{ user['personnumber'] }}  Email:{{ user['email'] }}  Password:{{ user['password'] }} Address:{{ user['address'] }} Available Balance:{{ user['AvailableBalance'] }} </h2>
-        </a>
-    {% endfor %} 
-    {%endblock%}
