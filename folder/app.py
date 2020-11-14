@@ -9,17 +9,12 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 app = Flask(__name__)
-app.secret_key = "abbas"
+app.secret_key = "58e37a9fe2de71b7d772e11e31a288bb"
+# secret key created using secrets.token_hex(16) on the python interpreter within terminal.
 
 @app.route('/')
 def index():
     return render_template('hjemmeside.html')
-@app.route("/view")
-def view():
-    conn = get_db_connection()
-    users = conn.execute('SELECT * FROM users').fetchall()
-    conn.close()
-    return render_template('view.html', users=users)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
